@@ -1,0 +1,48 @@
+{% load static %}
+<html>
+  <head>
+    <title>Video Live Stream</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <style>
+      .button {margin-right: 5%;
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #000000;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        opacity: 1.0;
+      }
+      
+      .button:hover {background-color: #362727}
+      
+      .button:active {
+        background-color: #000000;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+          </style>
+  </head>
+  <body>
+
+    <div id = "bg2">
+      <div class="container">   
+      <h1 style="margin-left: 45%;">AI Piano</h1>
+      <img src="{% url 'video_feed' %}" style="margin-left: 20%;"> 
+      <form method="POST">
+        {% csrf_token %}
+        <button class="button" id="submit">Go Back</button>
+      </form>
+      </div>
+      
+    </div>
+    
+    <script src="{% static 'piano/main.js' %}"></script>
+  </body>
+</html>

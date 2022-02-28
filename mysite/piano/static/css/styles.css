@@ -1,0 +1,18 @@
+.container{
+    padding-left: 10%;
+    padding-right: 10%;
+    align-content: center;
+}
+
+#bg1{
+    background-image: url("photo1.jpg");
+    height: 100vh;
+
+}
+
+#bg2{
+    background-color: #362727;
+    height: 100vh;
+
+}
+
